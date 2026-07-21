@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dan Oldja — Mechanical Engineering</title>
+<meta name="description" content="Portfolio of Dan Oldja, Mechanical Engineering student at the University of Akron.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Registration / trim marks -->
+<div class="trim trim-tl" aria-hidden="true"></div>
+<div class="trim trim-tr" aria-hidden="true"></div>
+<div class="trim trim-bl" aria-hidden="true"></div>
+<div class="trim trim-br" aria-hidden="true"></div>
+
+<div class="sheet">
+
+  <nav class="topbar">
+    <span class="topbar-mark">D.O.</span>
+    <div class="topbar-links">
+      <a href="#notes">01 Notes</a>
+      <a href="#details">02 Details</a>
+      <a href="#parts">03 Parts List</a>
+      <a href="#approval">04 Approval</a>
+    </div>
+  </nav>
+
+  <!-- SHEET 1 — TITLE BLOCK / HERO -->
+  <header class="titleblock" id="top">
+    <svg class="tb-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="0" y1="100" x2="100" y2="100" class="draw-line" pathLength="100"/>
+      <line x1="0" y1="0" x2="0" y2="100" class="draw-line" pathLength="100"/>
+    </svg>
+
+    <p class="eyebrow">MECHANICAL &nbsp;/&nbsp; DESIGN &nbsp;/&nbsp; PROTOTYPE</p>
+    <h1 class="stamp">DAN&nbsp;OLDJA</h1>
+    <p class="tb-subtitle">Mechanical Engineering Student — University of Akron</p>
+
+    <div class="tb-grid">
+      <div class="tb-cell"><span class="tb-label">Drawn by</span><span class="tb-value">D. OLDJA</span></div>
+      <div class="tb-cell"><span class="tb-label">Date</span><span class="tb-value" id="tb-date">—</span></div>
+      <div class="tb-cell"><span class="tb-label">Scale</span><span class="tb-value">N.T.S.</span></div>
+      <div class="tb-cell"><span class="tb-label">Sheet</span><span class="tb-value">1 OF 1</span></div>
+      <div class="tb-cell"><span class="tb-label">Rev</span><span class="tb-value tb-rev">A</span></div>
+    </div>
+  </header>
+
+  <!-- SHEET 2 — GENERAL NOTES (ABOUT) -->
+  <section class="section" id="notes">
+    <h2 class="section-title"><span class="section-num">02</span> General Notes</h2>
+    <ol class="notes-list">
+      <li>Student is pursuing a B.S. in Mechanical Engineering at the University of Akron.</li>
+      <li>Focus areas include mechanical design, prototyping, and controls.</li>
+      <li>Experience includes team leadership on design–build–test projects.</li>
+      <li>Unless otherwise noted, all work shown below is original student work.</li>
+    </ol>
+  </section>
+
+  <!-- SHEET 3 — DETAIL VIEWS (PROJECTS) -->
+  <section class="section" id="details">
+    <h2 class="section-title"><span class="section-num">03</span> Detail Views</h2>
+
+    <div class="detail-card">
+      <div class="detail-figure">
+        <svg viewBox="0 0 160 120" class="detail-icon" aria-hidden="true">
+          <rect x="20" y="55" width="100" height="34" rx="4" class="line-shape"/>
+          <circle cx="42" cy="95" r="12" class="line-shape"/>
+          <circle cx="98" cy="95" r="12" class="line-shape"/>
+          <path d="M120 65 L140 50 L140 70 Z" class="line-shape"/>
+          <line x1="20" y1="45" x2="120" y2="45" class="dim-line"/>
+          <line x1="20" y1="40" x2="20" y2="50" class="dim-line"/>
+          <line x1="120" y1="40" x2="120" y2="50" class="dim-line"/>
+        </svg>
+      </div>
+      <div class="detail-copy">
+        <div class="detail-tag">DETAIL <span>A</span></div>
+        <h3>ME Freshman Design Project</h3>
+        <p class="detail-meta">Spring 2026 — University of Akron</p>
+        <p>Led a team of Mechanical Engineering students through the design, testing, and build of an RC vehicle capable of picking up and depositing balls of varying size and mass. Responsible for coordinating the team's design process from concept through a working prototype.</p>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-figure">
+        <svg viewBox="0 0 160 120" class="detail-icon" aria-hidden="true">
+          <rect x="60" y="30" width="20" height="60" rx="3" class="line-shape"/>
+          <circle cx="70" cy="20" r="10" class="line-shape"/>
+          <path d="M45 95 L95 95 L88 110 L52 110 Z" class="line-shape"/>
+          <path d="M25 15 C 40 5, 55 5, 60 18" class="dim-line" fill="none"/>
+          <path d="M56 12 L60 18 L52 20" class="dim-line" fill="none"/>
+        </svg>
+      </div>
+      <div class="detail-copy">
+        <div class="detail-tag">DETAIL <span>B</span></div>
+        <h3>Remote Pressure Washer Shutoff</h3>
+        <p class="detail-meta">Independent project</p>
+        <p>Designed a remote-controlled servo system that shuts off a pressure washer from long range, removing the need to walk back to the unit to power it down.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHEET 4 — PARTS LIST (SKILLS) -->
+  <section class="section" id="parts">
+    <h2 class="section-title"><span class="section-num">04</span> Parts List</h2>
+    <table class="bom">
+      <thead>
+        <tr><th>Item</th><th>Description</th><th>Category</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>CAD Modeling &amp; Design</td><td>Design</td></tr>
+        <tr><td>2</td><td>Prototyping &amp; Fabrication</td><td>Build</td></tr>
+        <tr><td>3</td><td>Servo &amp; RC Control Systems</td><td>Controls</td></tr>
+        <tr><td>4</td><td>Design–Build–Test Iteration</td><td>Process</td></tr>
+        <tr><td>5</td><td>Team Leadership</td><td>Project Mgmt</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SHEET 5 — APPROVAL / CONTACT -->
+  <section class="section" id="approval">
+    <h2 class="section-title"><span class="section-num">05</span> Approval</h2>
+    <div class="approval-box">
+      <p>Interested in working together or want to talk about a project? Reach out.</p>
+      <div class="approval-links">
+        <a href="mailto:[email protected]" class="btn">EMAIL →</a>
+        <a href="#" class="btn btn-ghost">LINKEDIN →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>DAN OLDJA</span>
+    <span>SHEET 1 OF 1</span>
+    <span>REV A</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
