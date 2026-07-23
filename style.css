@@ -273,6 +273,12 @@ a { color: inherit; }
   font-size: 0.9rem;
   min-height: 1.2em;
 }
+.form-note {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 24px;
+}
+.form-note a { text-decoration: underline; }
 
 /* FOOTER */
 .site-footer {

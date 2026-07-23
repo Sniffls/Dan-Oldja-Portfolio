@@ -100,15 +100,15 @@
     <h2>Get In Touch</h2>
     <p class="mono">Whether you're a recruiter or simply want to connect, I'm always open to discussing mechanical engineering topics and opportunities.</p>
 
-    <form class="contact-form" id="contact-form">
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mnjeblay" method="POST">
       <div class="form-row">
         <div class="field">
           <label for="fname">First Name*</label>
-          <input type="text" id="fname" name="fname" required>
+          <input type="text" id="fname" name="First Name" required>
         </div>
         <div class="field">
           <label for="lname">Last Name*</label>
-          <input type="text" id="lname" name="lname" required>
+          <input type="text" id="lname" name="Last Name" required>
         </div>
       </div>
       <div class="field">
@@ -117,15 +117,18 @@
       </div>
       <div class="field">
         <label for="subject">Subject*</label>
-        <input type="text" id="subject" name="subject" required>
+        <input type="text" id="subject" name="Subject" required>
       </div>
       <div class="field">
         <label for="message">Message*</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="Message" rows="5" required></textarea>
       </div>
+      <input type="hidden" name="_subject" value="New portfolio inquiry">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <button type="submit" class="btn btn-submit">Submit</button>
       <p class="form-status" id="form-status"></p>
     </form>
+    <p class="form-note mono">Contact form powered by <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>. Messages are sent directly to Dan's inbox and are not stored on this site.</p>
   </section>
 
 </main>
