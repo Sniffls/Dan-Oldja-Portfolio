@@ -16,6 +16,10 @@ body {
   margin: 0;
   color: var(--navy);
   background: var(--hero-bg);
+  background-image:
+    linear-gradient(rgba(16,24,43,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,24,43,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
   font-family: var(--font-mono);
   line-height: 1.5;
   overflow-x: hidden;
@@ -68,6 +72,10 @@ a { color: inherit; }
 /* HERO */
 .hero {
   background: var(--hero-bg);
+  background-image:
+    linear-gradient(rgba(16,24,43,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,24,43,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
   display: flex;
   align-items: center;
   gap: 40px;
@@ -99,14 +107,17 @@ a { color: inherit; }
   overflow: visible;
 }
 .hero-image {
-  flex: 1.3 1 480px;
-  min-width: 320px;
-  margin-left: -70px;
+  flex: 1 1 420px;
+  min-width: 300px;
+  margin-left: -20px;
+  display: flex;
+  justify-content: center;
 }
 .hero-image img {
-  width: 108%;
-  max-width: 108%;
-  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: clamp(420px, 52vw, 680px);
 }
 
 .btn-stack {
@@ -155,6 +166,10 @@ a { color: inherit; }
 /* PROJECTS */
 .projects {
   background: var(--gray-bg);
+  background-image:
+    linear-gradient(rgba(16,24,43,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,24,43,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
   padding: 80px 40px 100px;
 }
 .projects > h2 {
@@ -218,6 +233,10 @@ a { color: inherit; }
 /* CONTACT */
 .contact {
   background: var(--hero-bg);
+  background-image:
+    linear-gradient(rgba(16,24,43,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,24,43,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
   padding: 80px 40px;
   max-width: 800px;
   margin: 0 auto;
@@ -314,7 +333,7 @@ a { color: inherit; }
 @media (max-width: 700px) {
   .hero { padding: 40px 20px; }
   .hero-image { margin-left: 0; }
-  .hero-image img { width: 100%; max-width: 100%; }
+  .hero-image img { max-height: 380px; }
   .idea h2, .idea p { transform: none; }
   .idea, .projects, .contact { padding: 50px 20px; }
   .figure-pair, .caption-split, .form-row {
@@ -328,4 +347,16 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn { transition: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.6, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
 }
