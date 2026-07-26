@@ -119,6 +119,12 @@ a { color: inherit; }
   max-width: 100%;
   max-height: clamp(420px, 52vw, 680px);
 }
+.hero-image .image-credit {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.55;
+  margin: 10px 0 0;
+}
 
 .btn-stack {
   display: flex;
@@ -148,19 +154,18 @@ a { color: inherit; }
 .idea {
   background: var(--orange);
   color: var(--navy);
-  padding: 80px 40px;
+  padding: 56px 40px;
+  text-align: center;
 }
 .idea h2 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   max-width: 1200px;
   margin: 0 auto 32px;
-  transform: translateX(-40px);
 }
 .idea p {
   max-width: 900px;
   margin: 0 auto;
   font-size: 1.1rem;
-  transform: translateX(-40px);
 }
 
 /* PROJECTS */
@@ -171,6 +176,7 @@ a { color: inherit; }
     linear-gradient(90deg, rgba(16,24,43,0.06) 1px, transparent 1px);
   background-size: 40px 40px;
   padding: 80px 40px 100px;
+  text-align: center;
 }
 .projects > h2 {
   font-size: clamp(3rem, 7vw, 5rem);
@@ -195,6 +201,8 @@ a { color: inherit; }
   font-size: 1.05rem;
   margin-bottom: 20px;
   max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .figure-pair {
@@ -245,19 +253,21 @@ a { color: inherit; }
   padding: 80px 40px;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 .contact h2 {
   font-size: clamp(2.5rem, 6vw, 3.5rem);
 }
 .contact > p.mono {
   max-width: 640px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   font-size: 1.05rem;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: left;
 }
 .form-row {
   display: grid;
@@ -323,7 +333,6 @@ a { color: inherit; }
   .hero { padding: 40px 20px; }
   .hero-image { margin-left: 0; }
   .hero-image img { max-height: 380px; }
-  .idea h2, .idea p { transform: none; }
   .idea, .projects, .contact { padding: 50px 20px; }
   .figure-pair, .caption-split, .form-row {
     grid-template-columns: 1fr;
