@@ -27,55 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   revealEls.forEach((el) => observer.observe(el));
 });
 
-// Smooth in-page scrolling with a slower, custom-eased motion.
-// The browser's built-in `scroll-behavior: smooth` is fixed-speed and feels
-// snappy/abrupt on longer jumps, so this intercepts anchor clicks and
-// animates the scroll manually with an eased curve instead.
-document.addEventListener("DOMContentLoaded", () => {
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const nav = document.querySelector(".nav");
-
-  function easeOutCubic(t) {
-    return 1 - Math.pow(1 - t, 3);
-  }
-
-  function smoothScrollTo(targetY, duration) {
-    const startY = window.scrollY;
-    const diff = targetY - startY;
-    let startTime = null;
-
-    function step(timestamp) {
-      if (startTime === null) startTime = timestamp;
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      window.scrollTo(0, startY + diff * easeOutCubic(progress));
-      if (progress < 1) requestAnimationFrame(step);
-    }
-
-    requestAnimationFrame(step);
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (e) => {
-      const id = link.getAttribute("href").slice(1);
-      if (!id) return;
-      const target = document.getElementById(id);
-      if (!target) return;
-
-      e.preventDefault();
-      const navHeight = nav ? nav.offsetHeight : 0;
-      const targetY = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
-
-      if (prefersReducedMotion) {
-        window.scrollTo(0, targetY);
-      } else {
-        smoothScrollTo(targetY, 700);
-      }
-      history.pushState(null, "", "#" + id);
-    });
-  });
-});
-
 // Contact form -> Formspree
 //
 // SETUP (one-time):
