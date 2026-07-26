@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const nav = document.querySelector(".nav");
 
-  function easeInOutCubic(t) {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
   }
 
   function smoothScrollTo(targetY, duration) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (startTime === null) startTime = timestamp;
       const elapsed = timestamp - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      window.scrollTo(0, startY + diff * easeInOutCubic(progress));
+      window.scrollTo(0, startY + diff * easeOutCubic(progress));
       if (progress < 1) requestAnimationFrame(step);
     }
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (prefersReducedMotion) {
         window.scrollTo(0, targetY);
       } else {
-        smoothScrollTo(targetY, 1000);
+        smoothScrollTo(targetY, 700);
       }
       history.pushState(null, "", "#" + id);
     });
